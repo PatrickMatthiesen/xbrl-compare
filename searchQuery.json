@@ -1,0 +1,24 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "dokumenter.dokumentMimeType": "xml"
+          }
+        },
+        {
+          "range": {
+            "offentliggoerelsesTidspunkt": {
+              "gte": "2020-01-01T00:00:00.000Z",
+              "lte": "2021-12-31T23:59:59.999Z"
+            }
+          }
+        }
+      ],
+      "must_not": [],
+      "should": []
+    }
+  },
+   "size": 2999
+}
